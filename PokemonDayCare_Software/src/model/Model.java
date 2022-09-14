@@ -320,7 +320,7 @@ public class Model {
 			String sql = "SELECT region, name, city, freeRooms FROM institution";
 			ResultSet rs = stmt.executeQuery(sql);
 			ResultSetMetaData rsmd = rs.getMetaData();
-			String column[] = { "Région", "Name", "City", "Free Rooms" };
+			String column[] = { "RÃ©gion", "Name", "City", "Free Rooms" };
 			rs.last();
 			int nbrows = rs.getRow();
 			rs.beforeFirst();
@@ -456,7 +456,7 @@ public class Model {
 		ResultSet rs = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			cn = DriverManager.getConnection(url, user, password);
+			cn = DriverManager.getConnection(url, login, password);
 			// SQL request
 			String sql = "SELECT * FROM login";
 			stmt = cn.createStatement();
