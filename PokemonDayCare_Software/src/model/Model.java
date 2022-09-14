@@ -462,7 +462,7 @@ public class Model {
 			stmt = cn.createStatement();
 			rs = stmt.executeQuery(sql);
 			while (rs.next()) {
-				if (rs.getString("username").equals(login)) {
+				if (rs.getString("username").equals(user)) {
 					if (rs.getString("password").equals(npwd)) {
 						System.out.println("correct");
 						View.connectionScreen.dispose();
